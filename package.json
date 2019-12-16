@@ -1,0 +1,29 @@
+{
+  "name": "max-utils",
+  "version": "1.0.0",
+  "description": "Javascript Utils",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimmieMax/max-utils.git"
+  },
+  "keywords": [
+    "javascript",
+    "utils"
+  ],
+  "author": "Jimmie Max",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimmieMax/max-utils/issues"
+  },
+  "homepage": "https://github.com/JimmieMax/max-utils#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "typescript": "^3.7.3"
+  }
+}

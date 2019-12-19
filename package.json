@@ -2,7 +2,7 @@
   "name": "max-utils",
   "version": "0.1.1",
   "description": "Javascript Utils",
-  "main": "./dist/index.js",
+  "main": "./dist",
   "scripts": {
     "build": "tsc",
     "test": "mocha --reporter spec"

@@ -1,9 +1,11 @@
 import { parseTime } from './time';
-import { copyText } from './html';
+import { debounce } from './debounce';
 import { deepClone } from './data';
+import { copyText } from './html';
 
 export {
     parseTime,
     deepClone,
+    debounce,
     copyText
 }

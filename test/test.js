@@ -6,7 +6,8 @@ const {
 
 const {
     parseTime,
-    deepClone
+    deepClone,
+    debounce
 } = require('../dist/index');
 
 describe('function parseTime', () => {

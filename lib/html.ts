@@ -6,10 +6,13 @@
  * @param callback 
  * @returns {*}
  */
-export function copyText(text: string, callback: any) {
+interface CopyText {
+    (text: string | number, callback: any): void
+}
+export const copyText: CopyText = (text, callback) => {
     const input = document.createElement('input');
     document.body.appendChild(input);
-    input.setAttribute('value', text);
+    input.setAttribute('value', String(text));
     input.select();
     if (document.execCommand('copy')) {
         document.execCommand('copy');
@@ -22,9 +25,12 @@ export function copyText(text: string, callback: any) {
  * @param link Link to download
  * @param callback 
  */
-export function download(link: string, name: string = '未命名') {
+interface Download {
+    (link: string, name: string | number): void
+}
+export const download: Download = (link, name = '未命名') => {
     let eleLink = document.createElement('a');
-    eleLink.download = name;
+    eleLink.download = String(name);
     eleLink.href = link;
     eleLink.click();
     eleLink.remove();
@@ -33,22 +39,28 @@ export function download(link: string, name: string = '未命名') {
  * Query string
  * @param name name of query
  */
-export function queryString(name: string) {
+interface QueryString {
+    (name: string): void
+}
+export const queryString: QueryString = (name: string) => {
     const reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
     const r = window.location.search.substr(1).match(reg);
-    return r?decodeURI(r[2]):null;
+    return r ? decodeURI(r[2]) : null;
 }
 /**
  * Query all string
  * @returns {Object}
  */
-export function queryStringObj() {
+interface QueryStringObj {
+    (): object
+}
+export const queryStringObj: QueryStringObj = () => {
     const url = window.location.search; //获取url中"?"符后的字串
-    const theRequest:any = {};
+    const theRequest: any = {};
     if (url.indexOf("?") !== -1) {
         const str = url.substr(1);
         let strs = str.split("&");
-        for(let i = 0; i < strs.length; i ++) {
+        for (let i = 0; i < strs.length; i++) {
             theRequest[strs[i].split("=")[0]] = decodeURI(strs[i].split("=")[1]);
         }
     }

@@ -7,7 +7,10 @@ var FUNC_ERROR_TEXT = 'Expected a function';
  * @param obj object to deep clone
  * @returns {Function}
 */
-export function debounce(fn: any, delay: number) {
+interface Debounce {
+    (fn: any, delay: number): any
+}
+export const debounce: Debounce = (fn, delay) => {
     if (typeof fn != 'function') {
         throw new TypeError(FUNC_ERROR_TEXT);
     }

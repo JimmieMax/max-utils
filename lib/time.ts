@@ -4,8 +4,12 @@
  * @param cFormat
  * @returns {*}
  */
-export function parseTime(time: any, cFormat: string = '{y}-{m}-{d} {h}:{i}:{s}'): string {
-    if (arguments.length === 0) {
+interface ParseTime {
+    (time: any, cFormat: string): string
+}
+
+export const parseTime: ParseTime = (time, cFormat = '{y}-{m}-{d} {h}:{i}:{s}') => {
+    if (!time) {
         return ''
     }
     const format = cFormat || '{y}-{m}-{d} {h}:{i}:{s}'

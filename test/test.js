@@ -1,3 +1,11 @@
+/*
+ * @Desc: 页面、组件说明
+ * @Author: Jimmie
+ * @Date: 2019-12-16 18:26:18
+ * @query: {string} p1  内容ID
+ * @props: {string} p1  数据源
+ * @event: {string} p1  des
+ */
 'use strict';
 const {
     expect,
@@ -7,7 +15,8 @@ const {
 const {
     parseTime,
     deepClone,
-    debounce
+    debounce,
+    type,
 } = require('../dist/index');
 
 describe('function parseTime', () => {
@@ -42,3 +51,24 @@ describe('function deepClone', () => {
         assert.lengthOf(result.c, 4);
     });
 });
+
+describe('function type', () => {
+    it('type "str" should return string', () => {
+        expect(type("str")).to.equal('string');
+    })
+    it('type 666 should return number', () => {
+        expect(type(666)).to.equal('number');
+    })
+    it('type {} should return object', () => {
+        expect(type({})).to.equal('object');
+    })
+    it('type [] should return array', () => {
+        expect(type([])).to.equal('array');
+    })
+    it('type null should return null', () => {
+        expect(type(null)).to.equal('null');
+    })
+    it('type function(){} should return function', () => {
+        expect(type(function(){})).to.equal('function');
+    })
+})

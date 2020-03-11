@@ -75,10 +75,13 @@ describe('function type', () => {
 })
 
 describe('function numberAddDot', () => {
-    it('numberAddDot 10000000 should return 100,000,000', () => {
+    it('numberAddDot 10000000 should return 10,000,000', () => {
         expect(numberAddDot(10000000)).to.equal('10,000,000');
     })
-    it('numberAddDot 10000000 should return number', () => {
+    it('numberAddDot 10000000 should return 10`000`000', () => {
         expect(numberAddDot(10000000, '`')).to.equal('10`000`000');
+    })
+    it('numberAddDot 10000000 should return 1000,0000', () => {
+        expect(numberAddDot(10000000, ',', 4)).to.equal('1000,0000');
     })
 })

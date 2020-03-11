@@ -11,6 +11,7 @@ import { debounce } from './debounce';
 import { deepClone } from './data';
 import { copyText } from './html';
 import { type } from './type';
+import { numberAddDot } from './transfer';
 
 export {
     parseTime,
@@ -18,4 +19,5 @@ export {
     debounce,
     copyText,
     type,
+    numberAddDot,
 }

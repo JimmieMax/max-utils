@@ -1,5 +1,5 @@
 /*
- * @Desc: 页面、组件说明
+ * @Desc: Test Case
  * @Author: Jimmie
  * @Date: 2019-12-16 18:26:18
  * @query: {string} p1  内容ID
@@ -17,6 +17,7 @@ const {
     deepClone,
     debounce,
     type,
+    numberAddDot,
 } = require('../dist/index');
 
 describe('function parseTime', () => {
@@ -70,5 +71,14 @@ describe('function type', () => {
     })
     it('type function(){} should return function', () => {
         expect(type(function(){})).to.equal('function');
+    })
+})
+
+describe('function numberAddDot', () => {
+    it('numberAddDot 10000000 should return 100,000,000', () => {
+        expect(numberAddDot(10000000)).to.equal('10,000,000');
+    })
+    it('numberAddDot 10000000 should return number', () => {
+        expect(numberAddDot(10000000, '`')).to.equal('10`000`000');
     })
 })

@@ -12,6 +12,7 @@ import { deepClone } from './data';
 import { copyText } from './html';
 import { type } from './type';
 import { numberAddDot } from './transfer';
+import { round, sum } from './number';
 
 export {
     parseTime,
@@ -20,4 +21,6 @@ export {
     copyText,
     type,
     numberAddDot,
+    round,
+    sum
 }

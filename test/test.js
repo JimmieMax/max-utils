@@ -18,6 +18,8 @@ const {
     debounce,
     type,
     numberAddDot,
+    round,
+    sum,
 } = require('../dist/index');
 
 describe('function parseTime', () => {
@@ -83,5 +85,29 @@ describe('function numberAddDot', () => {
     })
     it('numberAddDot 10000000 should return 1000,0000', () => {
         expect(numberAddDot(10000000, ',', 4)).to.equal('1000,0000');
+    })
+})
+
+describe('function round', () => {
+    it('round 1000.681 should return 1000.0', () => {
+        expect(round(1000.681, 1)).to.equal(1000.7);
+    })
+    it('round 1000.452345 should return 1000.45', () => {
+        expect(round(1000.452345, 2)).to.equal(1000.45);
+    })
+    it('round 1000.2345234 should return 1000.235', () => {
+        expect(round(1000.2345234, 3)).to.equal(1000.235);
+    })
+})
+
+describe('function sum', () => {
+    it('sum 1,2,3 should return 6', () => {
+        expect(sum(1,2,3)).to.equal(6);
+    })
+    it('sum [1,2,3,4] should return 10', () => {
+        expect(sum(...[1,2,3,4])).to.equal(10);
+    })
+    it('sum ["12", 23] should return 35', () => {
+        expect(sum(...['12', 23])).to.equal(35);
     })
 })

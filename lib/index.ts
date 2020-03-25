@@ -3,13 +3,13 @@
  * @Author: Jimmie
  * @Date: 2019-12-16 18:24:51
  */
-import { parseTime } from './time';
-import { debounce } from './debounce';
-import { deepClone } from './data';
-import { queryString, queryStringObj } from './browser';
-import { copyText, download } from './html';
 import { type } from './type';
+import { parseTime } from './time';
+import { deepClone } from './data';
 import { round, sum, numberAddDot } from './number';
+import { copyText, download } from './html';
+import { queryString, queryStringObj } from './browser';
+import { debounce } from './debounce';
 
 export {
     type,

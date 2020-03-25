@@ -1,6 +1,6 @@
 {
   "name": "max-utils",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Javascript Utils",
   "main": "./dist",
   "scripts": {

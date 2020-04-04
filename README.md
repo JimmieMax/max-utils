@@ -13,6 +13,10 @@ yarn build
 yarn test
 ```
 
+### Try in Runkit
+
+[Try in Runkit](https://runkit.com/jimmiemax/max-utils-try)
+
 ### Case
 
 #### Type

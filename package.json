@@ -1,12 +1,11 @@
 {
   "name": "max-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript Utils",
   "main": "./dist",
   "scripts": {
     "build": "tsc",
-    "test": "mocha --reporter spec",
-    "publish": "npm publish"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",

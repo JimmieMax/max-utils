@@ -76,3 +76,7 @@ yarn test
 1. debounce
 
 >debounce(function, delay);
+
+2. throttle
+
+>throttle(function, delay);

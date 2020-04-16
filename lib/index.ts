@@ -10,6 +10,7 @@ import { round, sum, numberAddDot } from './number';
 import { copyText, download } from './html';
 import { queryString, queryStringObj } from './browser';
 import { debounce } from './debounce';
+import { throttle } from './throttle';
 
 export {
     type,
@@ -23,4 +24,5 @@ export {
     queryString,
     queryStringObj,
     debounce,
+    throttle
 }

@@ -2,9 +2,6 @@
  * @Desc: Test Case
  * @Author: Jimmie
  * @Date: 2019-12-16 18:26:18
- * @query: {string} p1  内容ID
- * @props: {string} p1  数据源
- * @event: {string} p1  des
  */
 'use strict';
 const {

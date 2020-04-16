@@ -1,16 +1,16 @@
 
 /** Error message constants. */
-var FUNC_ERROR_TEXT = 'Expected a function';
+const FUNC_ERROR_TEXT = 'Expected a function';
 
 /**
  * Deep clone
  * @param obj object to deep clone
  * @returns {Function}
-*/
+ */
 interface Debounce {
     (fn: any, delay: number): any
 }
-export const debounce: Debounce = (fn, delay) => {
+export const debounce: Debounce = (fn, delay = 0) => {
     if (typeof fn != 'function') {
         throw new TypeError(FUNC_ERROR_TEXT);
     }

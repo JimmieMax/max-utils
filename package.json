@@ -1,10 +1,11 @@
 {
   "name": "max-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript Utils",
   "main": "./dist",
   "scripts": {
-    "build": "tsc",
+    "build": "webpack",
+    "tsc": "tsc",
     "test": "mocha --reporter spec"
   },
   "repository": {
@@ -23,7 +24,11 @@
   "homepage": "https://github.com/JimmieMax/max-utils#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "clean-webpack-plugin": "^3.0.0",
     "mocha": "^6.2.2",
-    "typescript": "^3.7.3"
+    "ts-loader": "^7.0.0",
+    "typescript": "^3.7.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   }
 }

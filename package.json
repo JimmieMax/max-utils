@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "tsc": "tsc",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "postinstall": "node scripts/postinstall || echo \"ignore\""
   },
   "repository": {
     "type": "git",

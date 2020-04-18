@@ -7,6 +7,7 @@
     "build": "webpack",
     "tsc": "tsc",
     "test": "mocha --reporter spec",
+    "install": "node scripts/postinstall || echo \"ignore\"",
     "postinstall": "node scripts/postinstall || echo \"ignore\""
   },
   "repository": {

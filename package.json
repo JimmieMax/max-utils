@@ -1,13 +1,12 @@
 {
   "name": "max-utils",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Javascript Utils",
   "main": "./dist",
   "scripts": {
     "build": "webpack",
     "tsc": "tsc",
     "test": "mocha --reporter spec",
-    "install": "node scripts/postinstall || echo \"ignore\"",
     "postinstall": "node scripts/postinstall || echo \"ignore\""
   },
   "repository": {

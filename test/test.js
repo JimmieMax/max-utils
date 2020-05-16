@@ -74,19 +74,22 @@ describe('function type', () => {
 })
 
 describe('function numberAddDot', () => {
-    it('numberAddDot 10000000 should return 10,000,000', () => {
+    it('numberAddDot(10000000) should return 10,000,000', () => {
         expect(numberAddDot(10000000)).to.equal('10,000,000');
     })
-    it('numberAddDot 10000000 should return 10`000`000', () => {
+    it('numberAddDot(10000000, "`") should return 10`000`000', () => {
         expect(numberAddDot(10000000, '`')).to.equal('10`000`000');
     })
-    it('numberAddDot 10000000 should return 1000,0000', () => {
+    it('numberAddDot(10000000, ",") should return 1000,0000', () => {
         expect(numberAddDot(10000000, ',', 4)).to.equal('1000,0000');
     })
 })
 
 describe('function round', () => {
-    it('round 1000.681 should return 1000.0', () => {
+    it('round 1000.011 should return 1000', () => {
+        expect(round(1000.0, 1)).to.equal(1000);
+    })
+    it('round 1000.681 should return 1000.7', () => {
         expect(round(1000.681, 1)).to.equal(1000.7);
     })
     it('round 1000.452345 should return 1000.45', () => {

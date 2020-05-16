@@ -33,8 +33,7 @@ yarn test
 ### Data
 
 1. deepClone
-
->deepClone(data);
+    >deepClone(data);
 
 ### Number
 

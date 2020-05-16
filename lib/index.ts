@@ -8,6 +8,7 @@ import { parseTime } from './time';
 import { deepClone } from './data';
 import { round, sum, numberAddDot } from './number';
 import { copyText, download } from './html';
+import { setCookie, getCookie, deleteCookie } from './cookie';
 import { queryString, queryStringObj } from './browser';
 import { debounce } from './debounce';
 import { throttle } from './throttle';
@@ -24,5 +25,8 @@ export {
     queryString,
     queryStringObj,
     debounce,
-    throttle
+    throttle,
+    setCookie,
+    getCookie,
+    deleteCookie,
 }

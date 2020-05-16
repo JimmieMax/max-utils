@@ -61,6 +61,15 @@ yarn test
 
 >download(link, name);
 
+#### Cookie
+
+1. setCookie
+    >setCookie(key, value, maxAge);
+2. getCookie
+    >getCookie(key);
+3. deleteCookie
+    >deleteCookie(key);
+
 #### Browser
 
 1. queryString

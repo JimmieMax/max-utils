@@ -1,67 +1,58 @@
 # max-utils
+
 Javascript Utils
 
-### Build
+## Build
 
 ``` javascript
 yarn build
 ```
 
-### Test
+## Test
 
 ``` javascript
 yarn test
 ```
 
-### Try in Runkit
+## Try in Runkit
 
 [Try in Runkit](https://runkit.com/jimmiemax/max-utils-try)
 
-### Case
+## Case
 
-#### Type
+### Type
 
 1. type
+    >type(data)
 
->type(data)
-
-#### Time
+### Time
 
 1. parseTime
+    >parseTime(time, '{y}-{m}-{d} {h}:{i}:{s}')
 
->parseTime(time, '{y}-{m}-{d} {h}:{i}:{s}')
-
-#### Data
+### Data
 
 1. deepClone
 
 >deepClone(data);
 
-#### Number
+### Number
 
 1. round
-
->round(number, decimals);
-
+    >round(number, decimals);
 2. sum
-
->sum(number1, number2, number3, ...);
-
+    >sum(number1, number2, number3, ...);
 3. numberAddDot
+    >numberAddDot(number, ',');
 
->numberAddDot(number, ',');
-
-#### Html
+### Html
 
 1. copyText
-
->copyText(text, callback);
-
+    >copyText(text, callback);
 2. download
+    >download(link, name);
 
->download(link, name);
-
-#### Cookie
+### Cookie
 
 1. setCookie
     >setCookie(key, value, maxAge);
@@ -70,22 +61,16 @@ yarn test
 3. deleteCookie
     >deleteCookie(key);
 
-#### Browser
+### Browser
 
 1. queryString
-
->queryString(name);
-
+    >queryString(name);
 2. queryStringObj
+    >queryStringObj();
 
->queryStringObj();
-
-#### Others
+### Others
 
 1. debounce
-
->debounce(function, delay);
-
+    >debounce(function, delay);
 2. throttle
-
->throttle(function, delay);
+    >throttle(function, delay);

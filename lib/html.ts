@@ -25,7 +25,6 @@ export const copyText: CopyText = (text, callback) => {
 /**
  * Download
  * @param link Link to download
- * @param callback 
  */
 interface Download {
     (link: string, name: string | number): void

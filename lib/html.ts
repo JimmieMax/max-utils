@@ -10,15 +10,16 @@ interface CopyText {
     (text: string | number, callback: any): void
 }
 export const copyText: CopyText = (text, callback) => {
-    const input = document.createElement('input');
-    document.body.appendChild(input);
-    input.setAttribute('value', String(text));
-    input.select();
-    if (document.execCommand('copy')) {
+    const temp = document.createElement('textarea');
+    temp.value = String(text);
+    temp.style.display = 'none';
+    document.body.appendChild(temp);
+    temp.select();
+    if (document.execCommand) {
         document.execCommand('copy');
         callback && callback();
     }
-    document.body.removeChild(input);
+    document.body.removeChild(temp);
 };
 
 /**

@@ -12,13 +12,13 @@ interface CopyText {
 export const copyText: CopyText = (text, callback) => {
     const temp = document.createElement('textarea');
     temp.value = String(text);
-    temp.style.display = 'none';
     document.body.appendChild(temp);
     temp.select();
     if (document.execCommand) {
         document.execCommand('copy');
         callback && callback();
     }
+    temp.style.display = 'none';
     document.body.removeChild(temp);
 };
 

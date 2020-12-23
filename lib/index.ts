@@ -6,7 +6,7 @@
 import { type } from './type';
 import { parseTime } from './time';
 import { deepClone } from './data';
-import { round, sum, numberAddDot } from './number';
+import { round, random, sum, numberAddDot } from './number';
 import { copyText, download } from './html';
 import { setCookie, getCookie, deleteCookie } from './cookie';
 import { queryString, queryStringObj } from './browser';
@@ -18,6 +18,7 @@ export {
     parseTime,
     deepClone,
     round,
+    random,
     sum,
     numberAddDot,
     copyText,

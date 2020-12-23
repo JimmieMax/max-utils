@@ -14,9 +14,10 @@ const {
     deepClone,
     debounce,
     type,
-    numberAddDot,
     round,
+    random,
     sum,
+    numberAddDot,
 } = require('../dist/index');
 
 describe('function parseTime', () => {
@@ -73,18 +74,6 @@ describe('function type', () => {
     })
 })
 
-describe('function numberAddDot', () => {
-    it('numberAddDot(10000000) should return 10,000,000', () => {
-        expect(numberAddDot(10000000)).to.equal('10,000,000');
-    })
-    it('numberAddDot(10000000, "`") should return 10`000`000', () => {
-        expect(numberAddDot(10000000, '`')).to.equal('10`000`000');
-    })
-    it('numberAddDot(10000000, ",") should return 1000,0000', () => {
-        expect(numberAddDot(10000000, ',', 4)).to.equal('1000,0000');
-    })
-})
-
 describe('function round', () => {
     it('round 1000.011 should return 1000', () => {
         expect(round(1000.0, 1)).to.equal(1000);
@@ -100,6 +89,12 @@ describe('function round', () => {
     })
 })
 
+describe('function random', () => {
+    it('random 10 should return length:10', () => {
+        expect(String(random(10)).length).equal(10);
+    })
+})
+
 describe('function sum', () => {
     it('sum 1,2,3 should return 6', () => {
         expect(sum(1,2,3)).to.equal(6);
@@ -109,5 +104,17 @@ describe('function sum', () => {
     })
     it('sum ["12", 23] should return 35', () => {
         expect(sum(...['12', 23])).to.equal(35);
+    })
+})
+
+describe('function numberAddDot', () => {
+    it('numberAddDot(10000000) should return 10,000,000', () => {
+        expect(numberAddDot(10000000)).to.equal('10,000,000');
+    })
+    it('numberAddDot(10000000, "`") should return 10`000`000', () => {
+        expect(numberAddDot(10000000, '`')).to.equal('10`000`000');
+    })
+    it('numberAddDot(10000000, ",") should return 1000,0000', () => {
+        expect(numberAddDot(10000000, ',', 4)).to.equal('1000,0000');
     })
 })

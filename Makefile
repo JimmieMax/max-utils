@@ -1,5 +1,5 @@
 
-.PHONY: dev build clean
+.PHONY: build clean
 
 publish: build
 	npm version patch

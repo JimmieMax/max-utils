@@ -12,6 +12,7 @@ import { setCookie, getCookie, deleteCookie } from './cookie';
 import { queryString, queryStringObj } from './browser';
 import { debounce } from './debounce';
 import { throttle } from './throttle';
+import { getSingleton } from './getSingleton';
 
 export {
     type,
@@ -30,4 +31,5 @@ export {
     setCookie,
     getCookie,
     deleteCookie,
+    getSingleton,
 }

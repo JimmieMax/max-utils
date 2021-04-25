@@ -18,6 +18,7 @@ const {
     random,
     sum,
     numberAddDot,
+    getSingleton
 } = require('../dist/index');
 
 describe('function parseTime', () => {
@@ -70,7 +71,7 @@ describe('function type', () => {
         expect(type(null)).to.equal('null');
     })
     it('type function(){} should return function', () => {
-        expect(type(function(){})).to.equal('function');
+        expect(type(function () {})).to.equal('function');
     })
 })
 
@@ -97,10 +98,10 @@ describe('function random', () => {
 
 describe('function sum', () => {
     it('sum 1,2,3 should return 6', () => {
-        expect(sum(1,2,3)).to.equal(6);
+        expect(sum(1, 2, 3)).to.equal(6);
     })
     it('sum [1,2,3,4] should return 10', () => {
-        expect(sum(...[1,2,3,4])).to.equal(10);
+        expect(sum(...[1, 2, 3, 4])).to.equal(10);
     })
     it('sum ["12", 23] should return 35', () => {
         expect(sum(...['12', 23])).to.equal(35);
@@ -116,5 +117,21 @@ describe('function numberAddDot', () => {
     })
     it('numberAddDot(10000000, ",") should return 1000,0000', () => {
         expect(numberAddDot(10000000, ',', 4)).to.equal('1000,0000');
+    })
+})
+
+describe('function getSingleton', () => {
+    const createPeople = function (name) {
+        this.name = name;
+        return this;
+    }
+    const instanceCreatePeople = getSingleton(createPeople);
+    const instanceJimmie = instanceCreatePeople.call({}, 'Jimmie');
+    const instanceMax = instanceCreatePeople.call({}, 'Max');
+    it('instanceJimmie should equal to instanceMax', () => {
+        expect(instanceJimmie).to.equal(instanceMax);
+    })
+    it('instanceJimmie.getName() should equal to instanceMax.getName()', () => {
+        expect(instanceJimmie.name).to.equal(instanceMax.name);
     })
 })

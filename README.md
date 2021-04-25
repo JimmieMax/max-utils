@@ -21,6 +21,12 @@ yarn build
 yarn test
 ```
 
+## Istanbul coverage
+
+``` javascript
+yarn istanbul
+```
+
 ## Try in Runkit
 
 [Try in Runkit](https://runkit.com/jimmiemax/max-utils-try)

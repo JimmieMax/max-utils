@@ -8,7 +8,7 @@
     "tsc": "tsc",
     "test": "mocha --reporter spec",
     "istanbul": "istanbul cover _mocha",
-    "publish": "npm version patch && node scripts/postinstall || echo \"ignore\" && git push"
+    "publish": "node scripts/postinstall || echo \"ignore\""
   },
   "repository": {
     "type": "git",

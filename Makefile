@@ -3,7 +3,7 @@
 
 publish: build
 	npm version patch
-	npm run publish
+	npm publish
 	git push
 
 clean:

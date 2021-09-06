@@ -18,15 +18,18 @@ export const throttle: Throttle = (fn, delay = 0) => {
     firstTime = true;
   return function (this: void) {
     let args = arguments;
-    // 第一次直接执行
-    if (firstTime) {
-      firstTime = false;
-      fn.apply(this, args);
-    }
     if (!canRun) return; // 注意，这里不能用timer来做标记，因为setTimeout会返回一个定时器id
     canRun = false;
-    setTimeout(() => {
+    // 第一次直接执行
+    if (firstTime) {
       fn.apply(this, args);
+    }
+    setTimeout(() => {
+      if (firstTime) {
+        firstTime = false;
+      } else {
+        fn.apply(this, args);
+      }
       canRun = true;
     }, delay);
   };

@@ -52,6 +52,12 @@ describe('function deepClone', () => {
     it('result.c.length should return 4', () => {
         assert.lengthOf(result.c, 4);
     });
+    originalData.d = originalData;
+    it('deepClone(originalData).d should return target.d', () => {
+        const target = deepClone(originalData)
+        expect(target.d).to.eql(target.d);
+        expect(target.d.a).to.equal(1);
+    });
 });
 
 describe('function type', () => {
